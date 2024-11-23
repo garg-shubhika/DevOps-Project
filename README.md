@@ -70,3 +70,8 @@ Jenkins/Argo CD: Setting up CI/CD pipelines.
 Linux: Server and system management.
 Python/Shell Scripting: Automation tasks.
 This project can be showcased on GitHub or GitLab with a comprehensive README file, demonstrating your understanding of the technologies and tools. Let me know if you need specific code examples or additional guidance!# DevOps-Project
+
+
+
+
+Qualifications Infrastructure as Code (laC) and System Administration skills Software Development and Continuous Integration skills ⚫ GIT SCM, Jenkins, and Argo CD . Containerization (Docker and Podman), Container Orchestration Engines (Kubernetes and OpenShift) ⚫ 2+ years of DevOps experience . Intermediate to expert level of scripting languages: Python & Shell Scripting Proficiency in Linux systems . Experience in telecommunications or network engineering . Ability to work collaboratively in a team environment Strong problem-solving and analytical skills . Bachelor's degree in Telecommunication, Computer Science, Information Technology, or a related field
