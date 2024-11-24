@@ -1,0 +1,38 @@
+# Use official Python image from Docker Hub
+FROM python:3.9-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Install the necessary build dependencies for psycopg2
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+    
+# Install virtualenv
+RUN pip install --no-cache-dir virtualenv
+
+# Create a virtual environment (you can name it 'venv' or any name)
+RUN python -m venv /app/venv
+
+# Set the environment variable to make sure the virtualenv is activated in subsequent steps
+ENV VIRTUAL_ENV=/app/venv
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+# Copy the application files into the container
+COPY . .
+
+RUN pip install flask-cors
+# CMD ["python", "app.py"]
+RUN pip install psycopg2-binary
+
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose the port on which the app will run
+EXPOSE 5000
+
+# Run the app
+CMD ["python", "app.py"]
